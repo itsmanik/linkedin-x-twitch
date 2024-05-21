@@ -152,14 +152,14 @@ const Job = () => {
     return (
         <section>
             <div className="max-w-screen-lg mx-auto px-4 md:px-4">
-                <ul className="mt-7 space-y-3">
+                <ul className="mt-7 space-y-4">
                     {members.map((item, idx) => (
                         <li
                             key={idx}
                             className="duration-150 hover:border-white hover:text-lightWhite"
                             style={{ backgroundColor: rand.generate() }}
                         >
-                            <div className="hover:translate-x-1 px-4 py-5 hover:-translate-y-1 transition-all h-full w-full bg-darkBlack border-[1px] border-darkGray">
+                            <div className="hover:translate-x-1 px-6 py-6 hover:-translate-y-1 transition-all h-full w-full bg-darkBlack border-[1px] border-darkGray">
                                 <a href={item.path} className="space-y-3">
                                     <div className="flex items-center gap-x-3">
                                         <div className="bg-white w-14 h-14 border rounded-full flex items-center justify-center">
