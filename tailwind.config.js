@@ -5,6 +5,8 @@ export default {
         extend: {
             colors: {
                 purpleLogo: "#a970ff",
+                lightWhite: "#d7d7d7",
+                darkGray: "#3d3d3dcf"
             },
         },
     },

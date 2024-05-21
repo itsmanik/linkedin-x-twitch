@@ -220,7 +220,7 @@ const NavBarWithSearchBox = () => {
     return (
         <>
             <nav
-                className={`relative z-20 bg-[#18181B] w-full md:static md:text-sm md:border-none ${
+                className={`relative shadow shadow-black z-30 bg-[#18181B] w-full md:fixed md:text-sm md:border-none ${
                     state ? "shadow-lg rounded-b-xl md:shadow-none" : ""
                 }`}
             >
