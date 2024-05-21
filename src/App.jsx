@@ -12,7 +12,7 @@ import Help from "./components/Single/Help";
 
 function App() {
     return (
-        <div className="font-['Inter'] bg-[#0E0E10] h-screen overflow-hidden">
+        <div className="font-['Inter'] bg-[#0E0E10] text-lightWhite h-screen overflow-hidden">
             <NavBar />
             <div className="flex">
                 <AsideNav />
