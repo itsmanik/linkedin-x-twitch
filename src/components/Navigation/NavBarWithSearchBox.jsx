@@ -228,7 +228,7 @@ const NavBarWithSearchBox = () => {
                     <div className="flex items-center justify-between py-2 md:py-3 md:block">
                         <a href="javascript:void(0)">
                             <img
-                                src="/public/static/images/logo.png"
+                                src="/static/images/logo.png"
                                 width={30}
                                 height={20}
                                 alt="Linkedin-x-Twitch Logo"
