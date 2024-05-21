@@ -1,8 +1,24 @@
 import Post from "./Post";
+import { motion } from "framer-motion";
+
+const container = {
+    hidden: { opacity: 1 },
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.2,
+        },
+    },
+};
 
 const Posts = () => {
     return (
-        <div className="grid grid-cols-2 gap-y-10">
+        <motion.div
+            className="grid grid-cols-2 gap-y-10"
+            variants={container}
+            initial="hidden"
+            animate="show"
+        >
             <Post
                 name="Toni Ellis"
                 time="1"
@@ -57,7 +73,7 @@ const Posts = () => {
                 src="https://randomuser.me/api/portraits/men/29.jpg"
                 postSrc="https://assets.mediamodifier.com/mockups/5eb2992f1e7aaf247254d90c/linkedin-text-post-mockup-generator.jpg"
             />
-        </div>
+        </motion.div>
     );
 };
 

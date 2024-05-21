@@ -1,4 +1,20 @@
 import rand from "random-hex";
+import { motion } from "framer-motion";
+
+const itemm = {
+    hidden: { opacity: 0, filter: "blur(5px)", transform: "translateX(-10px)" },
+    show: { opacity: 1, filter: "blur(0)", transform: "translateX(0px)" },
+};
+
+const container = {
+    hidden: { opacity: 0 },
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.2,
+        },
+    },
+};
 
 const members = [
     {
@@ -152,10 +168,16 @@ const Job = () => {
     return (
         <section>
             <div className="max-w-screen-lg mx-auto px-4 md:px-4">
-                <ul className="mt-7 space-y-4">
+                <motion.ul
+                    className="mt-7 space-y-4"
+                    variants={container}
+                    initial="hidden"
+                    animate="show"
+                >
                     {members.map((item, idx) => (
-                        <li
+                        <motion.li
                             key={idx}
+                            variants={itemm}
                             className="duration-150 hover:border-white hover:text-lightWhite"
                             style={{ backgroundColor: rand.generate() }}
                         >
@@ -218,9 +240,9 @@ const Job = () => {
                                     </div>
                                 </a>
                             </div>
-                        </li>
+                        </motion.li>
                     ))}
-                </ul>
+                </motion.ul>
             </div>
         </section>
     );

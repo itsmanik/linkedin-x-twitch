@@ -1,12 +1,22 @@
 import rand from "random-hex";
 import { ThumbsUp, MessageCircle, Share2 } from "lucide-react";
+import { motion } from "framer-motion";
 
 /* eslint-disable react/prop-types */
+
+const item = {
+    hidden: { opacity: 0, filter: "blur(5px)", transform: "translateX(-10px)" },
+    show: { opacity: 1, filter: "blur(0)", transform: "translateX(0px)" },
+};
 
 function Post(props) {
     const style = { backgroundColor: rand.generate() };
     return (
-        <div className="m-auto" style={style}>
+        <motion.div
+            className="m-auto"
+            style={style}
+            variants={item}
+        >
             <div className="flex hover:translate-x-1 transition-all hover:-translate-y-1 cursor-pointer flex-col max-w-md h-[32.5rem] p-4 space-y-6 overflow-hidden shadow-2xl bg-darkBlack border border-darkGray dark:bg-gray-50 text-gray-100 dark:text-gray-800">
                 <div className="flex space-x-4">
                     <img
@@ -77,7 +87,7 @@ function Post(props) {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }
 
