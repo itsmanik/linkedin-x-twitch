@@ -3,12 +3,14 @@ import Home from "./components/Home/Home";
 import { Route, Routes } from "react-router-dom";
 import AsideNav from "./components/Navigation/AsideNav";
 import Notifications from "./components/Notifications/Notifications";
-import Jobs from "./components/Jobs/Jobs"
+import Jobs from "./components/Jobs/Jobs";
 import Messaging from "./components/Messaging/Messaging";
 import Connections from "./components/Connections/Connections";
 import Companies from "./components/Companies/Companies";
 import Settings from "./components/Single/Settings";
 import Help from "./components/Single/Help";
+import { Chart as ChartJS } from "chart.js/auto";
+import { Bar, Doughnut, Line } from "react-chartjs-2";
 
 function App() {
     return (
