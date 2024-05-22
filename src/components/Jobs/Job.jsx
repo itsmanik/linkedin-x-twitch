@@ -162,6 +162,18 @@ const members = [
         location: "Mauritania",
         path: "javascript:void(0)",
     },
+    {
+        company_icon: (
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Amazon_icon.svg/2500px-Amazon_icon.svg.png" className="h-10" />
+        ),
+        company_name: "Amazon",
+        job_title: "Amazon Web Services",
+        job_description:
+            "Amazon is excited to announce that we're expanding our team and looking for passionate developers and tech enthusiasts. Join us to help shape the future of software development and collaborate with some of the best minds in the industry.",
+        job_type: "Part-time",
+        location: "Canada",
+        path: "javascript:void(0)",
+    },
 ];
 
 const Job = () => {
