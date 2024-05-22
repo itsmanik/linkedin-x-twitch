@@ -1,10 +1,10 @@
 const InputMessage = () => {
     return (
         <div>
-            <section className="p-6 dark:text-gray-800">
+            <section className="lg:p-6 dark:text-gray-800">
                 <form
                     noValidate=""
-                    className="container w-full max-w-xl px-8 my-4 space-y-6 rounded-md shadow dark:bg-gray-50"
+                    className="container w-full max-w-xl lg:px-8 my-4 space-y-6 rounded-md shadow dark:bg-gray-50"
                 >
                     <h2 className="w-full leading-tight">
                         Write a new message

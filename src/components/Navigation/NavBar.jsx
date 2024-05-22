@@ -142,7 +142,7 @@ const ProfileDropDown = (props) => {
 
     return (
         <div className={`relative ${props}`}>
-            <div className="flex items-center space-x-4">
+            <div className="flex justify-center items-center space-x-4">
                 <button
                     ref={profileRef}
                     className="w-5 h-5 outline-none rounded-full ring-offset-2 lg:focus:ring-indigo-600"
@@ -165,14 +165,14 @@ const ProfileDropDown = (props) => {
                     </svg>
                 </button>
                 <div className="lg:hidden">
-                    <span className="block">Micheal John</span>
+                    <span className="block">Manik S H</span>
                     <span className="block text-sm text-gray-500">
-                        john@gmail.com
+                        manik.hilalpure@gmail.com
                     </span>
                 </div>
             </div>
             <ul
-                className={`bg-white top-12 right-0 mt-5 space-y-5 lg:absolute lg:border lg:rounded-md lg:text-sm lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${
+                className={`bg-white top-12 right-0 hidden lg:inline-block mt-5 space-y-5 lg:absolute lg:border lg:rounded-lg lg:text-sm lg:w-52 lg:shadow-lg lg:space-y-0 lg:mt-0 ${
                     state ? "" : "lg:hidden"
                 }`}
             >
@@ -212,7 +212,7 @@ const ProfileDropDown = (props) => {
                             d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
                             fillRule="evenodd"
                             clipRule="evenodd"
-                        ></path>    
+                        ></path>
                     </svg>
                 </button>
             </ul>
@@ -248,12 +248,12 @@ const NavBar = () => {
     return (
         <>
             <nav
-                className={`relative shadow shadow-black z-30 bg-[#18181B] w-full md:fixed md:text-sm md:border-none ${
-                    state ? "shadow-lg rounded-b-xl md:shadow-none" : ""
+                className={`relative shadow shadow-black z-30 bg-[#18181B] w-full lg:fixed lg:text-sm lg:border-none ${
+                    state ? "shadow-lg rounded-b-xl lg:shadow-none" : ""
                 }`}
             >
-                <div className="items-center gap-x-5 px-2 max-w-screen-xl mx-auto md:flex md:px-4">
-                    <div className="flex items-center justify-between py-2 md:py-3 md:block">
+                <div className="items-center gap-x-5 px-2 max-w-screen-xl mx-auto lg:flex lg:px-4">
+                    <div className="flex items-center justify-between py-2 lg:py-3 lg:block">
                         <a href="javascript:void(0)">
                             <img
                                 src="/static/images/logo.png"
@@ -262,7 +262,7 @@ const NavBar = () => {
                                 alt="Linkedin-x-Twitch Logo"
                             />
                         </a>
-                        <div className="md:hidden">
+                        <div className="lg:hidden">
                             <button
                                 className="text-gray-500 hover:text-gray-800"
                                 onClick={() => setState(!state)}
@@ -298,11 +298,11 @@ const NavBar = () => {
                         </div>
                     </div>
                     <div
-                        className={`nav-menu flex-1 pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+                        className={`nav-menu flex-1 pb-3 mt-8 lg:block lg:pb-0 lg:mt-0 ${
                             state ? "block" : "hidden"
                         }`}
                     >
-                        <ul className="items-center space-y-6 md:justify-between md:flex md:space-x-6 md:space-y-0">
+                        <ul className="items-center space-y-6 lg:justify-between lg:flex lg:space-x-6 lg:space-y-0">
                             {navigation.map((item, idx) => {
                                 return (
                                     <li key={idx}>
@@ -318,34 +318,6 @@ const NavBar = () => {
                                                 }
                                             >
                                                 {item.title}
-                                                {drapdownState.idx == idx &&
-                                                drapdownState.isActive ? (
-                                                    <svg
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 20 20"
-                                                        fill="currentColor"
-                                                        className="w-5 h-5"
-                                                    >
-                                                        <path
-                                                            fillRule="evenodd"
-                                                            d="M14.77 12.79a.75.75 0 01-1.06-.02L10 8.832 6.29 12.77a.75.75 0 11-1.08-1.04l4.25-4.5a.75.75 0 011.08 0l4.25 4.5a.75.75 0 01-.02 1.06z"
-                                                            clipRule="evenodd"
-                                                        />
-                                                    </svg>
-                                                ) : (
-                                                    <svg
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 20 20"
-                                                        fill="currentColor"
-                                                        className="w-5 h-5"
-                                                    >
-                                                        <path
-                                                            fillRule="evenodd"
-                                                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                                                            clipRule="evenodd"
-                                                        />
-                                                    </svg>
-                                                )}
                                             </button>
                                         ) : (
                                             <a
@@ -355,79 +327,18 @@ const NavBar = () => {
                                                 {item.title}
                                             </a>
                                         )}
-                                        {item.isDrapdown &&
-                                        drapdownState.idx == idx &&
-                                        drapdownState.isActive ? (
-                                            <div className="mt-6 inset-x-0 top-20 w-full md:absolute md:border-y md:shadow-md md:mt-0">
-                                                <ul className="max-w-screen-xl mx-auto grid items-center gap-6 md:p-8 md:grid-cols-2 lg:grid-cols-3">
-                                                    {item?.navs.map(
-                                                        (dropdownItem, idx) => (
-                                                            <li key={idx}>
-                                                                <p className="text-indigo-600 text-sm">
-                                                                    {
-                                                                        dropdownItem.label
-                                                                    }
-                                                                </p>
-                                                                <ul className="mt-5 space-y-6">
-                                                                    {dropdownItem.navs.map(
-                                                                        (
-                                                                            navItem,
-                                                                            idx
-                                                                        ) => (
-                                                                            <li
-                                                                                key={
-                                                                                    idx
-                                                                                }
-                                                                                className="group"
-                                                                            >
-                                                                                <a
-                                                                                    href={
-                                                                                        navItem.path
-                                                                                    }
-                                                                                    className="flex gap-3 items-center"
-                                                                                >
-                                                                                    <div className="w-12 h-12 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center duration-150 group-hover:bg-indigo-600 group-hover:text-white md:w-14 md:h-14">
-                                                                                        {
-                                                                                            navItem.icon
-                                                                                        }
-                                                                                    </div>
-                                                                                    <div>
-                                                                                        <span className="text-gray-800 duration-200 group-hover:text-indigo-600 text-sm font-medium md:text-base">
-                                                                                            {
-                                                                                                navItem.title
-                                                                                            }
-                                                                                        </span>
-                                                                                        <p className="text-sm text-gray-600 group-hover:text-gray-800 mt-1">
-                                                                                            {
-                                                                                                navItem.desc
-                                                                                            }
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </a>
-                                                                            </li>
-                                                                        )
-                                                                    )}
-                                                                </ul>
-                                                            </li>
-                                                        )
-                                                    )}
-                                                </ul>
-                                            </div>
-                                        ) : (
-                                            ""
-                                        )}
                                     </li>
                                 );
                             })}
-                            <form className="flex flex-1 justify-center items-center space-x-2 rounded-md">
+                            <form className="flex flex-1 justify-center items-center space-x-2 rounded-lg">
                                 <input
-                                    className="w-full py-2 text-gray-200 border border-[#6b6b6b] rounded-l-md bg-transparent pl-2 appearance-none placeholder-gray-500 outline-none focus:border-purpleLogo sm:w-80"
+                                    className="w-full py-2 text-gray-200 border border-[#6b6b6b] rounded-l-lg bg-transparent pl-2 appearance-none placeholder-gray-500 outline-none focus:border-purpleLogo sm:w-80"
                                     type="text"
                                     placeholder="Search"
                                 />
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="h-5 p-2 !ml-0 cursor-pointer box-content w-5 rounded-r-md flex-none text-gray-300 bg-[#2F2F35]"
+                                    className="h-5 p-2 !ml-0 cursor-pointer box-content w-5 rounded-r-lg flex-none text-gray-300 bg-[#2F2F35]"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
@@ -440,11 +351,11 @@ const NavBar = () => {
                                     />
                                 </svg>
                             </form>
-                            <div className="flex items-center justify-end gap-x-6 space-y-3 md:flex md:space-y-0">
+                            <div className="flex items-center justify-center gap-x-6 space-y-3 lg:flex lg:space-y-0">
                                 <li>
                                     <a
                                         href="javascript:void(0)"
-                                        className="block py-1 px-3 text-white font-bold text-center bg-[#2F2F35] hover:bg-[#3f3f45] border rounded md:border-none"
+                                        className="block py-1 px-3 text-white font-bold text-center bg-[#2F2F35] hover:bg-[#3f3f45] border rounded lg:border-none"
                                     >
                                         Log In
                                     </a>
@@ -452,7 +363,7 @@ const NavBar = () => {
                                 <li>
                                     <a
                                         href="javascript:void(0)"
-                                        className="block py-2 font-bold px-3 text-center text-white bg-[#9147FF] hover:bg-[#822fff] active:bg-indigo-700 active:shadow-none rounded shadow md:inline"
+                                        className="block py-2 font-bold px-3 text-center text-white bg-[#9147FF] hover:bg-[#822fff] active:bg-indigo-700 active:shadow-none rounded shadow lg:inline"
                                     >
                                         Sign Up
                                     </a>
@@ -465,7 +376,7 @@ const NavBar = () => {
             </nav>
             {state ? (
                 <div
-                    className="z-10 fixed top-0 w-screen h-screen bg-black/20 backdrop-blur-sm md:hidden"
+                    className="z-10 fixed top-0 w-screen h-screen bg-black/20 backdrop-blur-sm lg:hidden"
                     onClick={() => setState(false)}
                 ></div>
             ) : (

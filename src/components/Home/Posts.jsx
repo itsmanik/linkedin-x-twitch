@@ -14,7 +14,7 @@ const container = {
 const Posts = () => {
     return (
         <motion.div
-            className="grid grid-cols-2 gap-y-10"
+            className="grid grid-cols1 lg:grid-cols-2 gap-y-10 gap-1"
             variants={container}
             initial="hidden"
             animate="show"
