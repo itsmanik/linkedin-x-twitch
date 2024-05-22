@@ -19,7 +19,7 @@ const Posts = () => {
             initial="hidden"
             animate="show"
         >
-            <Post
+                <Post
                 name="Toni Ellis"
                 time="1"
                 title="New Project Announcement: Excited to Share Our Latest Initiative"
