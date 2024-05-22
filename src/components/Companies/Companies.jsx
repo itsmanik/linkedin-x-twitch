@@ -1,5 +1,6 @@
+// eslint-disable-next-line no-unused-vars
 import { Chart as ChartJS } from "chart.js/auto";
-import { Bar, Doughnut, Line } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 
 const Companies = () => {
     return (
@@ -20,7 +21,8 @@ const Companies = () => {
                         datasets: [
                             {
                                 label: "Average Salary (LPA)",
-                                data: [109, 34, 65, 56, 33, 66, 76, 67],backgroundColor: ["#a970ff"]
+                                data: [109, 34, 65, 56, 33, 66, 76, 67],
+                                backgroundColor: ["#a970ff"],
                             },
                         ],
                     }}
