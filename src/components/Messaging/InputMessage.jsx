@@ -1,6 +1,19 @@
+import { motion } from "framer-motion";
+
 const InputMessage = () => {
     return (
-        <div>
+        <motion.div
+            initial={{
+                opacity: 0,
+                filter: "blur(3px)",
+                transform: "translateX(-10px)",
+            }}
+            whileInView={{
+                opacity: 1,
+                filter: "blur(0)",
+                transform: "translateX(0px)",
+            }}
+        >
             <section className="lg:p-6 dark:text-gray-800">
                 <form
                     noValidate=""
@@ -37,7 +50,7 @@ const InputMessage = () => {
                     </div>
                 </form>
             </section>
-        </div>
+        </motion.div>
     );
 };
 

@@ -1,47 +1,94 @@
 import { Trash2 } from "lucide-react";
+import { motion } from "framer-motion";
+
+const container = {
+    hidden: { opacity: 1 },
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1,
+        },
+    },
+};
+
+const itemm = {
+    hidden: { opacity: 0, filter: "blur(3px)", transform: "translateX(-10px)" },
+    show: { opacity: 1, filter: "blur(0)", transform: "translateX(0px)" },
+};
 
 const members = [
     {
-        avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
-        name: "Your resume has been resumed",
-        email: "john@example.com",
-    },
-    {   
-        avatar: "https://randomuser.me/api/portraits/men/86.jpg",
-        name: "Chris bondi",
-        email: "chridbondi@example.com",
+        avatar: "https://media.licdn.com/dms/image/C560BAQHaVYd13rRz3A/company-logo_100_100/0/1638831590218/linkedin_logo?e=1724284800&v=beta&t=EFQC4O49x5jG7omhUyBtiQivld69vnPeiq474L4sTBk",
+        name: "New post you might like",
+        email: "2 min ago",
     },
     {
-        avatar: "https://images.unsplash.com/photo-1464863979621-258859e62245?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
-        name: "yasmine",
-        email: "yasmine@example.com",
+        avatar: "https://media.licdn.com/dms/image/C4E0BAQEHzGrkE_U23Q/company-logo_100_100/0/1630636899456/linkedin_news_india_logo?e=1724284800&v=beta&t=seqVaNW3J001WtpMbuLazdM6RMOllG3JAXaNgMPGjTI",
+        name: "Your resume has been selected",
+        email: "5 min ago",
     },
     {
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=a72ca28288878f8404a795f39642a46f",
-        name: "Joseph",
-        email: "joseph@example.com",
+        avatar: "https://media.licdn.com/dms/image/C4E0BAQEHzGrkE_U23Q/company-logo_100_100/0/1630636899456/linkedin_news_india_logo?e=1724284800&v=beta&t=seqVaNW3J001WtpMbuLazdM6RMOllG3JAXaNgMPGjTI",
+        name: "The best company to work with in 2024",
+        email: "49 min ago",
+    },
+    {
+        avatar: "https://media.licdn.com/dms/image/C560BAQHaVYd13rRz3A/company-logo_100_100/0/1638831590218/linkedin_logo?e=1724284800&v=beta&t=EFQC4O49x5jG7omhUyBtiQivld69vnPeiq474L4sTBk",
+        name: "We are always here to help",
+        email: "1 hr ago",
+    },
+    {
+        avatar: "https://media.licdn.com/dms/image/C4E0BAQEHzGrkE_U23Q/company-logo_100_100/0/1630636899456/linkedin_news_india_logo?e=1724284800&v=beta&t=seqVaNW3J001WtpMbuLazdM6RMOllG3JAXaNgMPGjTI",
+        name: "Meet the youngest coder in the world",
+        email: "6 hr ago",
+    },
+    {
+        avatar: "https://media.licdn.com/dms/image/C4E0BAQEHzGrkE_U23Q/company-logo_100_100/0/1630636899456/linkedin_news_india_logo?e=1724284800&v=beta&t=seqVaNW3J001WtpMbuLazdM6RMOllG3JAXaNgMPGjTI",
+        name: "We all want te become rich, but are we willing to work?",
+        email: "9 hr ago",
+    },
+    {
+        avatar: "https://media.licdn.com/dms/image/C4E0BAQEHzGrkE_U23Q/company-logo_100_100/0/1630636899456/linkedin_news_india_logo?e=1724284800&v=beta&t=seqVaNW3J001WtpMbuLazdM6RMOllG3JAXaNgMPGjTI",
+        name: "AIML latest tech released in china",
+        email: "22 hr ago",
+    },
+    {
+        avatar: "https://media.licdn.com/dms/image/C560BAQHaVYd13rRz3A/company-logo_100_100/0/1638831590218/linkedin_logo?e=1724284800&v=beta&t=EFQC4O49x5jG7omhUyBtiQivld69vnPeiq474L4sTBk",
+        name: "Kerala surpasses New Delhi in economics",
+        email: "3 days ago",
+    },
+    {
+        avatar: "https://media.licdn.com/dms/image/C560BAQHaVYd13rRz3A/company-logo_100_100/0/1638831590218/linkedin_logo?e=1724284800&v=beta&t=EFQC4O49x5jG7omhUyBtiQivld69vnPeiq474L4sTBk",
+        name: "World's largest contest to take part",
+        email: "3 Weeks ago",
     },
 ];
 
 const Home = () => {
     return (
-        <div className="text-white w-full mt-16 h-[90vh] overflow-y-scroll overflow-x-hidden p-8">
+        <div className="text-white font-normal w-full mt-16 h-[90vh] overflow-y-scroll overflow-x-hidden p-8">
             <div className="max-w-2xl">
                 <div className="items-start justify-between sm:flex">
                     <div>
                         <h1 className="text-xl font-bold">
-                            Explore opportunities
+                            Manage your Notifications
                         </h1>
                         <p className="text-gray-500 text-sm">
-                            Based on your profile and search history
+                            Latest ones
                         </p>
                     </div>
                 </div>
-                <ul className="mt-7 ml-6 divide-y divide-darkGray">
+                <motion.ul
+                    variants={container}
+                    initial="hidden"
+                    animate="show"
+                    className="mt-7 ml-6 divide-y divide-darkGray"
+                >
                     {members.map((item, idx) => (
-                        <li
+                        <motion.li
+                            variants={itemm}
                             key={idx}
-                            className="py-2 flex justify-between items-center"
+                            className="py-2 px-2 hover:bg-darkGray cursor-pointer flex justify-between items-center"
                         >
                             <div className="flex gap-3">
                                 <img
@@ -63,9 +110,9 @@ const Home = () => {
                                     className="cursor-pointer hover:stroke-red-600"
                                 />
                             </div>
-                        </li>
+                        </motion.li>
                     ))}
-                </ul>
+                </motion.ul>
             </div>
         </div>
     );
